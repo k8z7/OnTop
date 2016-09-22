@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.kbh.ontop">
 
-    <!-- 여기에 퍼미션을 선언해도 서비스에서는 안먹는다. 꼭 서비스 선언부에 퍼미션 등록해야 한다.-->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
@@ -21,7 +20,7 @@
         <service
             android:name=".AlwaysOnTopService"
             android:enabled="true"
-            android:permission="android.permission.SYSTEM_ALERT_WINDOW" > <!-- 퍼미션 중요 -->
+            android:exported="false" >
         </service>
     </application>
 
