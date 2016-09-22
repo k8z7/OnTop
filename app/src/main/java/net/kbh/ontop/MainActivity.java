@@ -24,4 +24,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         else
             stopService(new Intent(this, AlwaysOnTopService.class));	//서비스 종료
     }
+
+    @Override
+    protected void onDestroy() {
+        stopService(new Intent(this, AlwaysOnTopService.class));	//서비스 종료
+        super.onDestroy();
+    }
+
 }

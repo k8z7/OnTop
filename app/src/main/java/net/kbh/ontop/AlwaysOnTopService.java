@@ -36,10 +36,11 @@ public class AlwaysOnTopService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if(tv != null)		//서비스 종료시 뷰 제거. *중요 : 뷰를 꼭 제거 해야함.
+        if(tv != null)	//서비스 종료시 뷰 제거. *중요 : 뷰를 꼭 제거 해야함.
         {
             ((WindowManager) getSystemService(WINDOW_SERVICE)).removeView(tv);
             tv = null;
         }
     }
+
 }

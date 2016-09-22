@@ -22,9 +22,6 @@
             android:name=".AlwaysOnTopService"
             android:enabled="true"
             android:permission="android.permission.SYSTEM_ALERT_WINDOW" > <!-- 퍼미션 중요 -->
-            <intent-filter >
-                <action android:name="net.kbh.OnTop"/>
-            </intent-filter>
         </service>
     </application>
 
